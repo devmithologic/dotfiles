@@ -1,0 +1,26 @@
+# ============================================================================
+# .gitignore - dotfiles repo
+# Don't commit these to the dotfiles repo
+# ============================================================================
+
+# Secrets and tokens
+.env
+*.pem
+*.key
+
+# macOS
+.DS_Store
+._*
+
+# Backup files
+*.bak
+*.swp
+*~
+
+# p10k cache (generated, large)
+# The config (.p10k.zsh) IS tracked; the cache is not
+.cache/
+
+# zsh compiled files
+*.zwc
+*.zwc.old

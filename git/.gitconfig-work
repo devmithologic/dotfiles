@@ -1,0 +1,8 @@
+# ============================================================================
+# .gitconfig-work - Nasdaq overrides
+# Applied automatically to repos inside ~/work/
+# ============================================================================
+
+[user]
+    name = Alejandro Zamudio
+    email = alejandroantonio.zamudio@nasdaq.com

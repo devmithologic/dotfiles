@@ -1,0 +1,53 @@
+# ============================================================================
+# .gitignore_global - Files to never commit anywhere
+# ============================================================================
+
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# --- Windows ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Editors ---
+*.swp
+*.swo
+*~
+.vscode/settings.json
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# --- Environment / secrets ---
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# --- Node ---
+node_modules/
+
+# --- Terraform ---
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+!*.tfvars.example
+
+# --- Docker ---
+docker-compose.override.yml

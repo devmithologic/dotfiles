@@ -1,0 +1,67 @@
+# ============================================================================
+# .gitconfig - Alejandro Zamudio (devmithologic)
+# ============================================================================
+
+[user]
+    name = Alejandro Zamudio
+    email = devmithologic@gmail.com
+
+# --- Work config override (Nasdaq) ---
+# Any repo cloned inside ~/work/ will use your corporate email
+# Create ~/work/ for Nasdaq repos: mkdir -p ~/work
+[includeIf "gitdir:~/work/"]
+    path = ~/.dotfiles/git/.gitconfig-work
+
+[core]
+    editor = nvim
+    excludesfile = ~/.gitignore_global
+    autocrlf = input
+    pager = bat --paging=always 2>/dev/null || less
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = true
+
+[push]
+    default = current
+    autoSetupRemote = true
+    followTags = true
+
+[fetch]
+    prune = true
+
+[merge]
+    conflictstyle = diff3
+    tool = nvim
+
+[diff]
+    colorMoved = default
+
+[rebase]
+    autoStash = true
+
+[rerere]
+    enabled = true
+
+[color]
+    ui = auto
+
+[alias]
+    # Quick status
+    s = status -sb
+    # Pretty log
+    lg = log --oneline --graph --all -20
+    # Last commit
+    last = log -1 --stat
+    # Undo last commit (keep changes)
+    undo = reset --soft HEAD~1
+    # Amend without editing message
+    oops = commit --amend --no-edit
+    # Show all branches with last commit
+    branches = branch -a --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+    # Stash all including untracked
+    stash-all = stash push --include-untracked
+    # Clean merged branches
+    cleanup = "!git branch --merged main | grep -v main | xargs -r git branch -d"
