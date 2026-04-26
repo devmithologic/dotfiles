@@ -172,8 +172,8 @@ link_file "$DOTFILES_DIR/git/.gitignore_global" "$HOME/.gitignore_global"
 link_file "$DOTFILES_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf"
 
 # Neovim
-mkdir -p "$HOME/.config/nvim"
-link_file "$DOTFILES_DIR/nvim/init.lua" "$HOME/.config/nvim/init.lua"
+mkdir -p "$HOME/.config"
+link_file "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
 
 # --- Create common directories ---
 mkdir -p "$HOME/dev" "$HOME/projects"

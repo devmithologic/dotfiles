@@ -65,3 +65,5 @@
     stash-all = stash push --include-untracked
     # Clean merged branches
     cleanup = "!git branch --merged main | grep -v main | xargs -r git branch -d"
+[url "git@github.com:"]
+	insteadOf = https://github.com/
