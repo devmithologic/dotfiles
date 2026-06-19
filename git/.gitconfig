@@ -6,12 +6,6 @@
     name = Alejandro Zamudio
     email = devmithologic@gmail.com
 
-# --- Work config override (Nasdaq) ---
-# Any repo cloned inside ~/work/ will use your corporate email
-# Create ~/work/ for Nasdaq repos: mkdir -p ~/work
-[includeIf "gitdir:~/work/"]
-    path = ~/.dotfiles/git/.gitconfig-work
-
 [core]
     editor = nvim
     excludesfile = ~/.gitignore_global
