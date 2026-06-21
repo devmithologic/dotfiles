@@ -54,7 +54,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("x", "<leader>p", '"_dP', { desc = "Paste without overwriting" })
 
 -- Quick file explorer
-vim.keymap.set("n", "<leader>e", ":Explore<CR>", { desc = "File explorer" })
+vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "File explorer" })
 
 -- --- YAML settings (critical for k8s manifests) ---
 vim.api.nvim_create_autocmd("FileType", {
@@ -77,3 +77,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- --- Status line (simple, no plugins needed) ---
 vim.opt.statusline = " %f %m %r %= %l:%c  %p%%  %y "
 
+-- Opciones de sesión recomendadas por auto-session
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
