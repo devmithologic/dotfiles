@@ -115,3 +115,5 @@ compinit
 
 # --- Powerlevel10k ---
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ $PATH =~ everything.fzf ]] || PATH="~/.efzf/:$PATH"
+
